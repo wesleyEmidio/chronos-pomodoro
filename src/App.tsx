@@ -1,3 +1,6 @@
+import './styles/theme.css';
+import './styles/global.css';
+
 //exportando a função
 export function App() {
   console.log('oi');
