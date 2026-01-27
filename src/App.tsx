@@ -1,3 +1,5 @@
+import { Heading } from './components/Heading';
+
 import './styles/theme.css';
 import './styles/global.css';
 
@@ -6,10 +8,14 @@ export function App() {
   console.log('oi');
 
   return (
-    // react fragment <> </>
     <>
-      <h1>Olá mundo ! (do App)</h1>
-      <p>Teste wesley</p>
+      <Heading />
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum cumque
+        incidunt accusamus commodi quasi sit, doloribus in fugiat, repellat
+        laudantium voluptas praesentium labore dolore unde! Aliquam, dolorem! A,
+        quia rerum!
+      </p>
     </>
   );
 }
