@@ -1,0 +1,33 @@
+/* Container principal do logo */
+.logo {
+  display: flex; /* Usa flexbox para layout */
+  align-items: center; /* Centraliza verticalmente os itens */
+  justify-content: center; /* Centraliza horizontalmente os itens */
+  gap: 2.4rem; /* Espaço entre os elementos do logo */
+  padding-top: 3.2rem; /* Espaçamento superior do logo */
+}
+
+/* Link do logo (texto + ícone) */
+.logoLink {
+  display: flex; /* Layout flexível */
+  flex-direction: column; /* Itens empilhados verticalmente */
+  align-items: center; /* Centraliza horizontalmente */
+  justify-content: center; /* Centraliza verticalmente */
+  font-weight: bold; /* Texto em negrito */
+  gap: 0.4rem; /* Espaço entre texto e ícone */
+  font-size: 4.2rem; /* Tamanho da fonte do texto */
+  text-decoration: none; /* Remove sublinhado do link */
+  color: var(--primary); /* Cor principal definida no CSS variável */
+  transition: all 0.1s ease-in-out; /* Animação suave nas interações */
+}
+
+/* Efeito ao passar o mouse sobre o logo */
+.logoLink:hover {
+  filter: brightness(50%); /* Escurece o logo ao passar o mouse */
+}
+
+/* Estilização do SVG dentro do logo */
+.logoLink svg {
+  width: 6.4rem; /* Largura do ícone */
+  height: 6.4rem; /* Altura do ícone */
+}

@@ -1,12 +1,15 @@
+/* Container fluido (ocupa toda a largura disponível) */
 .container-fluid {
-  max-width: auto;
+  max-width: auto; /* Permite que o container utilize toda a largura */
 }
 
+/* Container centralizado com largura máxima */
 .container {
-  max-width: 98rem;
-  margin: 0 auto;
+  max-width: 98rem; /* Define a largura máxima do conteúdo */
+  margin: 0 auto; /* Centraliza horizontalmente na tela */
 }
 
+/* Área de conteúdo interno */
 .content {
-  margin: 3.2rem;
+  margin: 3.2rem; /* Espaçamento externo em todos os lados */
 }
