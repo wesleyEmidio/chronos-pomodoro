@@ -1,36 +1,20 @@
 import './styles/theme.css';
 import './styles/global.css';
 
+import { Container } from './components/container';
+import { Heading } from './components/Heading';
+
 //exportando a função
 export function App() {
   return (
     <>
-      <div className='container'>
-        <div className='content'>
-          <section>LOGO</section>
-        </div>
-      </div>
+      <Container>
+        <Heading>LOGO</Heading>
+      </Container>
 
-      <div className='container'>
-        <div className='content'>
-          <section>MENU</section>
-        </div>
-      </div>
-
-      <div className='container'>
-        <div className='content'>
-          <section>FORM</section>
-        </div>
-      </div>
-
-      <div className='container'>
-        <div className='content'>
-          <section>FOOTER</section>
-        </div>
-      </div>
+      <Container>
+        <Heading>MENU</Heading>
+      </Container>
     </>
   );
 }
-
-//export default App; posso usar qualquer nome quando for exportar
-//export { App }; //Obriga a exportar com o mesmo nome
