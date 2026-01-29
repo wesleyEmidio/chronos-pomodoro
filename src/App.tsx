@@ -2,14 +2,18 @@ import { Heading } from './components/Heading';
 
 import './styles/theme.css';
 import './styles/global.css';
+import { TimerIcon } from 'lucide-react';
 
 //exportando a função
 export function App() {
-  console.log('oi');
-
   return (
     <>
-      <Heading />
+      <Heading>
+        Olá mundo 1
+        <button>
+          <TimerIcon />
+        </button>
+      </Heading>
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum cumque
         incidunt accusamus commodi quasi sit, doloribus in fugiat, repellat
