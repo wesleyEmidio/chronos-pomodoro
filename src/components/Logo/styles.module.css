@@ -23,7 +23,7 @@
 
 /* Efeito ao passar o mouse sobre o logo */
 .logoLink:hover {
-  filter: brightness(50%); /* Escurece o logo ao passar o mouse */
+  filter: brightness(80%); /* Escurece o logo ao passar o mouse */
 }
 
 /* Estilização do SVG dentro do logo */
