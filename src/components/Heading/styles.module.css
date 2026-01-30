@@ -1,6 +1,6 @@
 .heading {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2.4rem;
+  display: flex; /* Ativa o Flexbox para organizar os elementos internos */
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 2.4rem; /* Espaçamento entre os elementos internos */
 }

@@ -1,30 +1,30 @@
 /* Container principal do menu */
 .menu {
-  display: flex; /* Usa flexbox para layout */
-  align-items: center; /* Centraliza verticalmente os itens */
-  justify-content: center; /* Centraliza horizontalmente os itens */
-  gap: 1.6rem; /* Espaço entre os elementos do menu */
+  display: flex; /* Ativa o Flexbox para layout horizontal */
+  align-items: center; /* Centraliza os itens verticalmente */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 1.6rem; /* Espaçamento entre os itens do menu */
 }
 
-/* Link do menu (texto + ícone) */
+/* Link do menu (ícone + texto) */
 .menuLink {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  background: var(--primary);
-  color: var(--text-over-primary);
-  transition: all 0.1s ease-in-out;
-  padding: 1.2rem;
-  border-radius: 0.8rem;
+  display: inline-flex; /* Flex inline para alinhar ícone e texto */
+  align-items: center; /* Centraliza verticalmente o conteúdo */
+  justify-content: center; /* Centraliza horizontalmente o conteúdo */
+  text-decoration: none; /* Remove sublinhado do link */
+  background: var(--primary); /* Cor de fundo principal */
+  color: var(--text-over-primary); /* Cor do texto sobre o fundo primário */
+  transition: all 0.1s ease-in-out; /* Transição suave em interações */
+  padding: 1.2rem; /* Espaçamento interno */
+  border-radius: 0.8rem; /* Bordas arredondadas */
 }
 
-/* Efeito ao passar o mouse sobre o menu */
+/* Efeito hover no link do menu */
 .menuLink:hover {
-  filter: brightness(80%); /* Escurece o menu ao passar o mouse */
+  filter: brightness(80%); /* Escurece levemente ao passar o mouse */
 }
 
-/* Estilização do SVG dentro do menu */
+/* Estilização do ícone SVG dentro do menu */
 .menuLink svg {
   width: 2.4rem; /* Largura do ícone */
   height: 2.4rem; /* Altura do ícone */

@@ -1,0 +1,32 @@
+/* Estilo base do campo de input */
+.input {
+  background-color: transparent; /* Fundo transparente */
+  text-align: center; /* Texto centralizado */
+  font-size: 1.8rem; /* Tamanho da fonte do texto digitado */
+  padding: 0.8rem; /* Espaçamento interno */
+  color: var(--text-default); /* Cor padrão do texto */
+  outline: none; /* Remove o contorno padrão do navegador */
+
+  border: 0.2rem solid transparent; /* Borda invisível para manter layout estável */
+  border-bottom: 0.2rem solid var(--primary); /* Borda inferior destacada */
+  transition: all 0.1s ease-in-out; /* Animação suave nas mudanças de estado */
+}
+
+/* Estilo aplicado quando o input está em foco */
+.input:focus {
+  border-radius: 0.8rem; /* Bordas arredondadas ao focar */
+  border: 0.2rem solid var(--primary); /* Borda completa com a cor primária */
+}
+
+/* Estilo do texto placeholder */
+.input::placeholder {
+  color: var(--gray-500); /* Cor mais suave para o placeholder */
+  font-size: 1.4rem; /* Fonte menor que o texto digitado */
+  font-style: italic; /* Texto em itálico */
+}
+
+/* Estilo aplicado quando o input está desabilitado */
+.input:disabled {
+  border-bottom: 0.2rem solid var(--disabled); /* Borda inferior indicando estado desativado */
+  color: var(--text-muted); /* Cor do texto mais apagada */
+}
