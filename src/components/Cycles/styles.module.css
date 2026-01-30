@@ -1,31 +1,37 @@
+/* Container principal dos ciclos (pomodoro, pausas, etc.) */
 .cycles {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1.6rem;
+  display: flex; /* Usa Flexbox para organizar os elementos */
+  flex-direction: column; /* Organiza os itens na vertical */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  gap: 1.6rem; /* Espaço entre os elementos */
 }
 
+/* Container que agrupa os pontos indicadores de ciclos */
 .cycleDots {
-  display: flex;
-  gap: 0.8rem;
+  display: flex; /* Usa Flexbox para alinhar os pontos */
+  gap: 0.8rem; /* Espaço entre cada ponto */
 }
 
+/* Estilo base de cada ponto de ciclo */
 .cycleDot {
-  width: 2rem;
-  height: 2rem;
-  background-color: var(--primary);
-  border-radius: 50%;
+  width: 2rem; /* Largura do ponto */
+  height: 2rem; /* Altura do ponto */
+  background-color: var(--primary); /* Cor padrão do ponto */
+  border-radius: 50%; /* Deixa o elemento totalmente circular */
 }
 
+/* Cor específica para o ciclo de trabalho */
 .workTime {
-  background-color: var(--warning);
+  background-color: var(--warning); /* Cor de alerta (trabalho ativo) */
 }
 
+/* Cor específica para pausa curta */
 .shortBreakTime {
-  background-color: var(--primary);
+  background-color: var(--primary); /* Cor padrão para pausa curta */
 }
 
+/* Cor específica para pausa longa */
 .longBreakTime {
-  background-color: var(--info);
+  background-color: var(--info); /* Cor informativa para pausa longa */
 }
