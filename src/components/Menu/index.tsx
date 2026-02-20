@@ -1,46 +1,81 @@
-// Importa os ícones que serão usados no menu (SVG como componentes React)
-import { HistoryIcon, HouseIcon, SettingsIcon, SunIcon } from 'lucide-react';
-
-// Importa os estilos CSS usando CSS Modules (escopo isolado)
+import {
+  HistoryIcon,
+  HouseIcon,
+  MoonIcon,
+  SettingsIcon,
+  SunIcon,
+} from 'lucide-react';
 import styles from './styles.module.css';
+import { useEffect, useState } from 'react';
 
-// Declara e exporta o componente Menu
+type AvailableThemes = 'dark' | 'light';
+
 export function Menu() {
-  // Retorna o JSX que será renderizado na tela
+  const [theme, setTheme] = useState<AvailableThemes>(() => {
+    const storageTheme =
+      (localStorage.getItem('theme') as AvailableThemes) || 'dark';
+    return storageTheme;
+  });
+
+  const nextThemeIcon = {
+    dark: <SunIcon />,
+    light: <MoonIcon />,
+  };
+
+  function handleThemeChange(
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>,
+  ) {
+    event.preventDefault(); //não segue o link
+
+    setTheme(prevTheme => {
+      const nextTheme = prevTheme === 'dark' ? 'light' : 'dark';
+      return nextTheme;
+    });
+  }
+
+  useEffect(() => {
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
   return (
-    // Div principal que envolve todo o menu
     <div className={styles.menu}>
-      {/* Link do menu para a página inicial */}
       <a
-        className={styles.menuLink} // Classe responsável pelo estilo do botão
-        href='#' // Link fictício (placeholder)
+        className={styles.menuLink}
+        href='#'
+        aria-label='Ir para a home.'
+        title='Ir para a home'
       >
-        <HouseIcon /> {/* Ícone de casa (Home) */}
+        <HouseIcon />
       </a>
 
-      {/* Link do menu para histórico */}
       <a
-        className={styles.menuLink} // Reutiliza o mesmo estilo
-        href='#' // Link fictício
+        className={styles.menuLink}
+        href='#'
+        aria-label='Ver historico.'
+        title='Ver historico'
       >
-        <HistoryIcon /> {/* Ícone de histórico */}
+        <HistoryIcon />
       </a>
 
-      {/* Link do menu para configurações */}
       <a
-        className={styles.menuLink} // Classe do botão do menu
+        className={styles.menuLink}
         href='#' // Link fictício
+        aria-label='configurações.'
+        title='configurações'
       >
-        <SettingsIcon /> {/* Ícone de configurações */}
+        <SettingsIcon />
       </a>
 
-      {/* Link do menu para alternar tema (claro/escuro) */}
       <a
-        className={styles.menuLink} // Mesmo padrão visual
+        className={styles.menuLink}
         href='#' // Link fictício
+        aria-label='Mudar tema.'
+        title='Mudar tema'
+        onClick={handleThemeChange}
       >
-        <SunIcon /> {/* Ícone de sol (tema claro) */}
+        {nextThemeIcon[theme]}
       </a>
-    </div> // Fim do container principal do menu
+    </div>
   );
 }
