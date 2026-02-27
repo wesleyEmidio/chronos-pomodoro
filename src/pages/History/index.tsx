@@ -12,18 +12,21 @@ import { sortTasks } from '../../uteis/sortTasks';
 import { formatDate } from '../../uteis/formatDate';
 import { getTaskStatus } from '../../uteis/getTaskStatus';
 import type { TaskModel } from '../../models/TaskModel';
+import { showMessage } from '../../adapters/showMessage';
+
+import { useEffect } from 'react';
 
 type SortField = 'name' | 'duration' | 'startDate';
 type SortDirection = 'asc' | 'desc';
 
 export function History() {
   const { state, dispatch } = useTaskContext();
+  const [confirmClearHistory, setConfirmClearHistory] = useState(false);
   const hasTasks = state.tasks.length > 0;
 
   const [field, setField] = useState<SortField>('startDate');
   const [direction, setDirection] = useState<SortDirection>('desc');
 
-  // ✅ Valor derivado (forma correta)
   const sortedTasks = useMemo(() => {
     return sortTasks({
       tasks: state.tasks,
@@ -31,6 +34,14 @@ export function History() {
       direction,
     });
   }, [state.tasks, field, direction]);
+
+  useEffect(() => {
+    if (!confirmClearHistory) return;
+
+    setConfirmClearHistory(false);
+
+    dispatch({ type: TaskActionTypes.RESET_STATE });
+  }, [confirmClearHistory, dispatch]);
 
   function handleSortTasks(newField: SortField) {
     const newDirection =
@@ -40,10 +51,22 @@ export function History() {
     setDirection(newDirection);
   }
 
+  useEffect(() => {
+    return () => {
+      showMessage.dismiss();
+    };
+  }, []);
+
   function handleResetHistory() {
-    if (!confirm('Tem certeza que deseja apagar todo o histórico?')) return;
-    dispatch({ type: TaskActionTypes.RESET_STATE });
+    showMessage.dismiss();
+    showMessage.confirm('Tem certeza?', confirmation => {
+      setConfirmClearHistory(confirmation);
+    });
   }
+
+  useEffect(() => {
+    document.title = 'Histórico - Chronos Pomodoro';
+  }, []);
 
   return (
     <MainTemplate>

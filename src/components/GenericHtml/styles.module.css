@@ -1,46 +1,86 @@
+/* Estilo para títulos principais (h1) dentro do GenericHtml */
 .genericHtml h1 {
+  /* Define um tamanho grande para o título principal */
   font-size: 3.2rem;
+
+  /* Espaçamento inferior para separar do conteúdo seguinte */
   margin-bottom: 1.6rem;
 }
 
+/* Estilo para subtítulos de nível 2 (h2) */
 .genericHtml h2 {
+  /* Tamanho intermediário entre h1 e h3 */
   font-size: 2.4rem;
+
+  /* Espaçamento inferior */
   margin-bottom: 1.2rem;
 }
 
+/* Estilo para subtítulos de nível 3 (h3) */
 .genericHtml h3 {
+  /* Tamanho menor, mantendo hierarquia visual */
   font-size: 2rem;
+
+  /* Espaçamento inferior */
   margin-bottom: 1rem;
 }
 
+/* Estilo para parágrafos */
 .genericHtml p {
+  /* Tamanho de fonte confortável para leitura */
   font-size: 1.6rem;
+
+  /* Altura da linha para melhorar legibilidade */
   line-height: 1.6;
+
+  /* Espaçamento inferior entre parágrafos */
   margin-bottom: 1.6rem;
 }
 
+/* Estilo para links */
 .genericHtml a {
+  /* Cor do link definida via variável de tema */
   color: var(--link-color);
+
+  /* Remove sublinhado padrão */
   text-decoration: none;
+
+  /* Deixa o link em negrito para destaque */
   font-weight: bold;
 }
 
+/* Estilo aplicado ao passar o mouse sobre o link */
 .genericHtml a:hover {
+  /* Adiciona sublinhado para indicar interação */
   text-decoration: underline;
 }
 
+/* Estilo para listas não ordenadas */
 .genericHtml ul {
+  /* Espaçamento à esquerda para alinhar os marcadores */
   padding-left: 2.4rem;
 }
 
+/* Estilo para itens de lista */
 .genericHtml li {
+  /* Espaçamento inferior entre itens */
   margin-bottom: 0.8rem;
 }
 
+/* Estilo para imagens dentro do conteúdo */
 .genericHtml img {
+  /* Garante que a imagem nunca ultrapasse a largura do container */
   max-width: 100%;
+
+  /* Mantém a proporção original da imagem */
   height: auto;
+
+  /* Arredonda levemente os cantos */
   border-radius: 0.8rem;
+
+  /* Faz a imagem se comportar como bloco */
   display: block;
+
+  /* Espaçamento vertical ao redor da imagem */
   margin: 1.6rem 0;
 }

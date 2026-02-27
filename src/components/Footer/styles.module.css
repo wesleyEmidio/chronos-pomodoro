@@ -1,18 +1,37 @@
 .footer {
+  /* Define o rodapé como um container flex */
   display: flex;
+
+  /* Organiza os elementos do rodapé em coluna (um embaixo do outro) */
   flex-direction: column;
+
+  /* Centraliza os itens horizontalmente */
   align-items: center;
+
+  /* Centraliza os itens verticalmente (caso haja altura disponível) */
   justify-content: center;
+
+  /* Define o tamanho da fonte do rodapé */
   font-size: 1.2rem;
+
+  /* Espaçamento entre os elementos do rodapé */
   gap: 1.6rem;
 }
 
+/* Estiliza os links dentro do rodapé */
 .footer a {
+  /* Define a cor do texto usando variável de tema */
   color: var(--text-muted);
+
+  /* Remove o sublinhado padrão dos links */
   text-decoration: none;
 }
 
+/* Estilo aplicado quando o mouse passa sobre o link */
 .footer a:hover {
+  /* Mantém a mesma cor do texto no hover */
   color: var(--text-muted);
+
+  /* Adiciona sublinhado para indicar interação */
   text-decoration: underline;
 }

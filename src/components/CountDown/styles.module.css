@@ -1,6 +1,17 @@
 .container {
+  /* Define o tamanho da fonte de forma responsiva:
+     - mínimo: 8rem
+     - valor ideal baseado na largura da viewport: 30vw
+     - máximo: 16rem
+     A função clamp garante que o tamanho nunca saia desses limites */
   font-size: clamp(8rem, 30vw, 16rem);
+
+  /* Deixa o texto em negrito,dando mais destaque ao contador */
   font-weight: bold;
+
+  /* Centraliza o texto horizontalmente dentro do container */
   text-align: center;
+
+  /* Define a altura da linha (espaçamento vertical entre linhas) como 1.3 vezes o tamanho da fonte, melhorando a legibilidade */
   line-height: 1.3;
 }

@@ -1,33 +1,70 @@
 .button {
+  /* Remove a borda padrão do botão */
   border: none;
+
+  /* Define a cor de fundo usando uma variável CSS (tema principal) */
   background: var(--primary);
+
+  /* Define a cor do texto/ícone para contrastar com o fundo */
   color: var(--text-over-primary);
+
+  /* Usa flexbox para alinhar o conteúdo interno */
   display: flex;
+
+  /* Centraliza o conteúdo verticalmente */
   align-items: center;
+
+  /* Centraliza o conteúdo horizontalmente */
   justify-content: center;
+
+  /* Define uma largura mínima para manter consistência visual */
   min-width: 24rem;
+
+  /* Espaçamento interno do botão */
   padding: 0.8rem;
+
+  /* Arredonda os cantos do botão */
   border-radius: 0.8rem;
+
+  /* Espaçamento externo vertical (topo e base) */
   margin: 4.8rem 0;
+
+  /* Mostra o cursor de clique ao passar o mouse */
   cursor: pointer;
+
+  /* Suaviza mudanças visuais (hover, foco, etc.) */
   transition: all 0.1s ease-in-out;
 }
 
+/* Estiliza ícones SVG dentro do botão */
 .button svg {
+  /* Largura do ícone */
   width: 3.2rem;
+
+  /* Altura do ícone */
   height: 3.2rem;
 }
 
+/* Efeito visual ao passar o mouse sobre o botão */
 .button:hover {
+  /* Diminui o brilho para indicar interação */
   filter: brightness(80%);
 }
 
+/* Variante verde do botão */
 .green {
+  /* Cor de fundo principal (estado padrão) */
   background: var(--primary);
+
+  /* Cor do texto/ícone sobre o fundo principal */
   color: var(--text-over-primary);
 }
 
+/* Variante vermelha do botão */
 .red {
+  /* Cor de fundo para ações destrutivas ou de alerta */
   background: var(--error);
+
+  /* Cor do texto/ícone sobre o fundo de erro */
   color: var(--text-over-error);
 }
